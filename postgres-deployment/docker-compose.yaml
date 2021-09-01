@@ -1,0 +1,39 @@
+version: "3"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    env_file:
+      - docker.env
+    ports:
+      - "35000:5432"
+    volumes:
+      - ./init.sh:/docker-entrypoint-initdb.d/initdb.sh
+      - /Users/Anastassis/postgres:/var/lib/postgresql/data
+    networks:
+      - postgres
+    restart: unless-stopped
+
+
+  pgadmin:
+#    links:
+#      - postgres:postgres
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin:/root/.pgadmin
+    env_file:
+      - docker.env
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

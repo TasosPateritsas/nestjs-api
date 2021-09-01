@@ -1,0 +1,72 @@
+CURLS FOR USERS===================================================
+
+curl --location --request POST 'localhost:3000/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"firstName":"Marcos",
+"lastName":"Silva",
+"email":"my_amazing_fake_email@gmail.com",
+"password":"easyPass!23"
+}'
+
+curl --location --request POST 'localhost:3000/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"firstName":"Tasos",
+"lastName":"Pateritsas",
+"email":"my_amazing_fake_email@gmail.com",
+"password":"easyPass!23"
+}'
+
+curl --location --request PATCH 'localhost:3000/users/42f1dea5-d474-4e76-b65f-350178403b07' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"email":"email@gmail.com"
+}'
+
+curl --location --request GET 'localhost:3000/users/42f1dea5-d474-4e76-b65f-350178403b07' \
+--header 'Content-Type: application/json' 
+
+CURLS FOR REAL-ESTATE=============================================
+
+curl --location --request POST 'localhost:3000/real-estates' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"name":"Apartment 1",
+"address":"Chaina 30, Chalkida",
+"sellerId":"42f1dea5-d474-4e76-b65f-350178403b07",
+"price":"230000"
+}'
+
+curl --location --request POST 'localhost:3000/real-estates' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"name":"Apartment 2",
+"address":"Chaina 30, Chalkida",
+"sellerId":"42f1dea5-d474-4e76-b65f-350178403b07",
+"price":"230000"
+}'
+
+
+curl --location --request GET 'localhost:3000/real-estates' \
+--header 'Content-Type: application/json' 
+
+CURLS FOR WISHLIST================================================
+
+curl --location --request POST 'localhost:3000/wishlist' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"userId":"785da7d9-9012-49b4-bfee-7dc9ef577ac1",
+"realEstateId":"3b9fb035-e071-490c-bbbc-263320606713"
+}'
+
+curl --location --request GET 'localhost:3000/wishlist/785da7d9-9012-49b4-bfee-7dc9ef577ac1' \
+--header 'Content-Type: application/json' 
+
+WRONG CURL
+curl --location --request POST 'localhost:3000/wishlist' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"userId":"785da7d9-9012-49b4-bfee-7dc9ef577cc1",
+"realEstateId":"3b9fb035-e071-490c-bbbc-263320606713"
+}'
