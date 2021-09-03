@@ -1,7 +1,7 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { RealEstatesService } from 'src/real-estates/real-estates.service';
-import { UsersService } from 'src/users/users.service';
+import { RealEstatesService } from '../real-estates/real-estates.service';
+import { UsersService } from '../users/users.service';
 import { Repository } from 'typeorm';
 import { CreateWishlistDto } from './dto/create-wishlist.dto';
 import { Wishlist } from './entities/wishlist.entity';
