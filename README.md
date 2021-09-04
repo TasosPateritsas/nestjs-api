@@ -8,7 +8,7 @@
 
 ## API Schema
 <p align="center">
-  <img src="API.png" width="320" alt="api_schema" />
+  <img src="API.png" width="420" alt="api_schema" />
 </p>
 
 ## Prerequisite Software
