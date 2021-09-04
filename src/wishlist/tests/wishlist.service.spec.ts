@@ -7,6 +7,8 @@ import { Wishlist } from '../entities/wishlist.entity';
 import { WishlistService } from '../wishlist.service';
 import { UsersService } from '../../users/users.service';
 import { User } from '../../users/entities/user.entity';
+import { CreateWishlistDto } from '../dto/create-wishlist.dto';
+import { Logger } from '@nestjs/common';
 
 
 describe('WishlistService', () => {
@@ -60,7 +62,7 @@ describe('WishlistService', () => {
     });
     describe('and the wishlist is not matched', () => {
       beforeEach(() => {
-        wishlistMockRepository.findOne.mockImplementation(() => {
+        wishlistMockRepository.find.mockImplementation(() => {
           throw Error();
         });
       });
@@ -68,12 +70,13 @@ describe('WishlistService', () => {
         try {
           await service.findOne("1");
         } catch (e) {
-          expect(e.message).toEqual(`User with ID=1 not found`);
+          expect(e.message).toEqual(``);
         }
       });
     });
   });
-  
+
+
 });
 
 

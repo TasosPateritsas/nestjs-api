@@ -1,3 +1,66 @@
+
+# Building and Testing Simple API
+## API Desing
+
+<p align="center">
+  <img src="API schema.png" width="320" alt="api_schema" />
+</p>
+
+## API Schema
+<p align="center">
+  <img src="API.png" width="320" alt="api_schema" />
+</p>
+
+## Prerequisite Software
+
+- [Git](https://git-scm.com/) a good source of information is [GitHub's Guide to Installing Git](https://help.github.com/articles/set-up-git).
+- [Node.JS](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/en/), follow the [installation guide](https://classic.yarnpkg.com/en/docs/install)
+- [Nest](https://nestjs.com/), follow the [installation guide](https://docs.nestjs.com/#installation)
+- [PostgreSQL](https://www.postgresql.org/), follow the [installation guide](https://www.postgresql.org/docs/9.3/tutorial-install.html)
+- [PGAdmin 4](https://www.pgadmin.org/download/), follow the [getting started guide](https://www.pgadmin.org/docs/pgadmin4/latest/getting_started.html)
+
+# Prepare Local Database
+```bash
+$ cd postgres-deployment
+$ docker-compose up -d
+```
+See README at postgres-deployment folder for more
+
+
+## Installation
+
+```bash
+$ yarn install
+```
+
+## Running the app
+
+```bash
+# development
+$ yarn start
+
+# watch mode
+$ yarn start:dev
+
+# production mode
+$ yarn start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ yarn test
+
+# e2e tests
+$ yarn test:e2e
+
+# test coverage
+$ yarn test:cov
+```
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -22,41 +85,7 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
