@@ -3,12 +3,12 @@
 ## API Desing
 
 <p align="center">
-  <img src="API schema.png" width="320" alt="api_schema" />
+  <img src="API schema.png" width="620" alt="api_schema" />
 </p>
 
 ## API Schema
 <p align="center">
-  <img src="API.png" width="420" alt="api_schema" />
+  <img src="API.png" width="620" alt="api_schema" />
 </p>
 
 ## Prerequisite Software
