@@ -59,6 +59,9 @@ $ yarn test:e2e
 # test coverage
 $ yarn test:cov
 ```
+## Swagger a RESTful API UI
+You can use http://localhost:3000/docs to visualize and interact with the API 
+- [Swagger](https://swagger.io/tools/swagger-ui/)
 
 
 <p align="center">
