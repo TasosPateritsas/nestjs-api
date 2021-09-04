@@ -22,11 +22,16 @@ export class RealEstatesService {
   }
 
   async findOne(id: string): Promise<RealEstate> {
-    const realEstate = await this.realEstateRepository.findOne(id);
-    if (!realEstate) {
+
+    try{
+      const realEstate = await this.realEstateRepository.findOne(id);
+      return realEstate;
+    }catch(e){
       throw new NotFoundException(`realEstate with ID=${id} not found`);
     }
-    return realEstate;
+    
+    
+    
   }
 
   async update(id: string, updateRealEstateDto: UpdateRealEstateDto) {

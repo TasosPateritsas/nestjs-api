@@ -44,7 +44,7 @@ describe('RealEstatesService', () => {
         try {
           await service.findOne("1");
         } catch (e) {
-          expect(e.message).toEqual(``);
+          expect(e.message).toEqual(`realEstate with ID=1 not found`);
         }
       });
     });

@@ -48,7 +48,7 @@ describe('UsersService', () => {
         try {
           await usersService.findOne("1");
         } catch (e) {
-          expect(e.message).toEqual(``);
+          expect(e.message).toEqual(`User with ID=1 not found`);
         }
       });
     });

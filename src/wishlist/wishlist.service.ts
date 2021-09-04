@@ -42,13 +42,14 @@ export class WishlistService {
 
   async findOne(userId: string):Promise<Wishlist[]> {
 
-    const list = await this.whishlistRepository.find({where: {userId: userId}});
+    try {
+      const list = await this.whishlistRepository.find({where: {userId: userId}});
+      return list;
 
-    if(!list){
+    }catch(e){
       throw new NotFoundException(`User with ID=${userId} not found`);
     }
-
-    return list;
+  
   }
 
   
