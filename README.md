@@ -1,6 +1,6 @@
 
 # Building and Testing Simple API
-## API Desing
+## API Design
 
 <p align="center">
   <img src="API schema.png" width="620" alt="api_schema" />
