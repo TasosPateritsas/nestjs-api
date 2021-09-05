@@ -11,6 +11,8 @@
   <img src="API.png" width="620" alt="api_schema" />
 </p>
 
+
+
 ## Prerequisite Software
 
 - [Git](https://git-scm.com/) a good source of information is [GitHub's Guide to Installing Git](https://help.github.com/articles/set-up-git).
@@ -26,6 +28,10 @@ $ cd postgres-deployment
 $ docker-compose up -d
 ```
 See README at postgres-deployment folder for more
+<p align="center">
+  <img src="database.png" width="620" alt="database" />
+</p>
+
 
 
 ## Installation
